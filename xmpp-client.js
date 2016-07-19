@@ -490,7 +490,8 @@ xmppClient.MUC = {
         xmppClient.sendToServer(data);
     },
     sendMessage:function(message, toJID){
-        xmppClient.sendMessage(message, toJID, 'groupchat');
+        var messageId = xmppClient.sendMessage(message, toJID, 'groupchat');
+        return messageId;;
     }
 }
 
